@@ -1,0 +1,12 @@
+# robot_controllers.yaml
+controller_manager:
+  type: "controller_manager/ControllerManager"
+  controllers:
+    - name: "left_wheel_position_controller"
+      type: "position_controllers/JointPositionController"
+      joints:
+        - "left_wheel_joint"
+    - name: "right_wheel_position_controller"
+      type: "position_controllers/JointPositionController"
+      joints:
+        - "right_wheel_joint"

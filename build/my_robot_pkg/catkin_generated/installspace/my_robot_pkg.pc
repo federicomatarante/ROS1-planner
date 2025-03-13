@@ -1,0 +1,8 @@
+prefix=/home/federico/catkin_ws/install
+
+Name: my_robot_pkg
+Description: Description of my_robot_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs nav_msgs tf2_geometry_msgs

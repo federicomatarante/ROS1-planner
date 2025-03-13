@@ -1,0 +1,14 @@
+<launch>
+    <!-- Load the URDF file into the ROS parameter server -->
+    <param name="robot_description" command="cat $(find my_robot_pkg)/rviz/urdf/robot.urdf"/>
+
+    <!-- Start the robot_state_publisher to broadcast the robot's TFs -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <!-- Start RViz with the configured settings -->
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot_pkg)/rviz/configs/config.rviz"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_map_to_base_link" args="0 0 0 0 0 0 map base_link"/>
+
+</launch>

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+7e3009adbf5b2237eb84b6baedbb5f57 /home/federico/catkin_ws/devel/include/diff_drive_controller/DiffDriveControllerConfig.h
+777dd74cfd850425dd376a1583625ee4 /home/federico/catkin_ws/devel/share/roseus/ros/my_robot_pkg/manifest.l
+6ce942217cd15464e36cb75b5e5d1e0a CMakeFiles/clean_test_results
+280c256088dc6db5fca68d7855159357 my_robot_pkg/CMakeFiles/my_robot_pkg_generate_messages_eus

@@ -1,0 +1,74 @@
+# This is an RViz configuration file. It defines the displays and settings for RViz.
+# Fixed Frame: map
+# Displays: Grid, GridMap, PoseStamped, Path, TF, RobotModel
+
+Visualization Manager:
+  Class: ""  # No specific class, this is the main manager
+  Displays:
+    - Class: rviz/Map
+      Name: OccupancyGrid
+      Enabled: true
+      Topic: /map  # Update this with your actual topic for the OccupancyGrid
+      Color Scheme: map  # You can adjust the color scheme if needed
+      Alpha: 1
+      Show Grid: true
+      Draw Behind: false
+
+    - Class: rviz/Path
+      Name: Planned Path
+      Enabled: true
+      Topic: /path
+      Color: 0.0 1.0 0.0 1.0  # Green color for path
+      Line Style: Lines
+      Line Width: 0.1
+
+    - Class: rviz/TF
+      Name: TF
+      Enabled: true
+      Fixed Frame: map
+      Display Style: Axes
+      Line Width: 0.05
+      Show Axes: true
+      Show Text: false
+      Show Frames: true
+
+    - Class: rviz/RobotModel
+      Name: Robot Model
+      Enabled: true
+      Robot Description: robot_description
+      TF Prefix: ""
+      Alpha: 1
+      Use Sim Time: false
+
+  Global Options:
+    Fixed Frame: map
+    Background Color: 0.0 0.0 0.0 1.0  # Black background
+  
+  Tools:
+    - Class: rviz/Interact
+      Name: Interact
+      Enabled: true
+      Tool Properties:
+        - Name: "Pick"
+        - Shortcut: "1"
+
+    - Class: rviz/MoveCamera
+      Name: Move Camera
+      Enabled: true
+      Tool Properties:
+        - Name: "Pan"
+        - Shortcut: "2"
+
+    - Class: rviz/SetGoal
+      Name: 2D Nav Goal
+      Topic: /move_base/goal
+      Tool Properties:
+        - Name: "Set Goal"
+        - Shortcut: "g"
+  
+    - Class: rviz/SetInitialPose
+      Name: 2D Nav Start
+      Topic: /initialpose
+      Tool Properties:
+        - Name: "Set Initial Position"
+        - Shortcut: "s"
