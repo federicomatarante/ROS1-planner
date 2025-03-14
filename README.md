@@ -1,5 +1,7 @@
 # My ROS Project
-
+<p align="center">
+  <img src="./rviz_example.png" alt="Example" width="70%">
+</p>
 ## Installation
 
 ```bash
@@ -30,6 +32,4 @@ For each of the following operations, open one different terminal
 ``rosrun my_robot_pkg map_publisher``
 ### Running planner
 ``rosrun my_robot_pkg planner``
-<p align="center">
-  <img src="./res/rviz_example.png" alt="Image Space Model" width="70%">
-</p>
+
